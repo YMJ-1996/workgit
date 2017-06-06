@@ -1,0 +1,31 @@
+{
+"name": "ABOUTREADER",   //插件的名字
+"version": "1.0",         //插件的版本号
+"manifest_version":2,
+"description": "TRANDLATE",   //插件的描述
+"browser_action": {            //插件详细信息
+"default_icon": "icon.png",    //插件的图标
+"default_popup": "popup.html"   //插件的页面
+},
+"background":       //后台运行文件
+	{ 
+		"scripts": ["jquery-1.11.1.min.js", "getword.js","background.js"] 
+	},
+"content_scripts":         //运行文件
+	[
+		{
+			"matches": ["http://*/*", "https://*/*"],//运行文件地址
+			"js": ["getword.js","jquery-1.11.1.min.js"]  //运行文件
+		}
+	],
+"web_accessible_resources":[
+"jquery-1.11.1.min.js",
+ "getword.js"
+ ],
+"permissions": [     //插件权限
+    "tabs",	
+	"activeTab",
+	"http://*/*",
+	"https://*/*"
+]
+}
