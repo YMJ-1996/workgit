@@ -21,12 +21,12 @@ window.onkeydown=function(event){
              if(e && e.keyCode==18){    //当按下ALT键时，执行函数，对划词进行翻译
 				 var ajax=Ajax();
 				 var a=(new Date).getTime();    //令a为随机数
-				 var m="20170528000049492"+words+a+"hX316cbxWEN_7_CzB_uy"   //连接字符串
+				 var m="xxxxxxxxxxxx"+words+a+"hX316cbxWEN_7_CzB_uy"   //连接字符串
 				 var mdd=md5(m);       //对字符串进行MD5加密
 				 var i;
 				 var booling;
 				 words=encodeURIComponent(words,"UTF-8");    //字符转为UTF-8编码格式
-				 var url="//fanyi-api.baidu.com/api/trans/vip/translate?q="+words+"&from=auto&to=zh&appid=20170528000049492&salt="+a+"&sign="+mdd;
+				 var url="//fanyi-api.baidu.com/api/trans/vip/translate?q="+words+"&from=auto&to=zh&appid=xxxxxxxxxxxxx&salt="+a+"&sign="+mdd;
 				   $.ajax({  //获取URL信息
 							url: '//fanyi-api.baidu.com/api/trans/vip/translate',
 							url: url,
